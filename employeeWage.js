@@ -35,7 +35,15 @@ while(totalEmployeeHours <= TOTAL_MONTHLY_WORKING_HOURS &&
     totalWorkingDays++;
 }
 
-console.log("Daily Wages : " + employeeDailyWageArray);
+let dayCounter = 0;
+function dayToDailyWageMap(dailyWage) {
+    dayCounter++;
+    return "Day " + dayCounter + " = Rs " + dailyWage;
+}
+let dayToDailyWageMapArray = employeeDailyWageArray.map(dayToDailyWageMap);
+console.log("Daily Wage Map :");
+console.log(dayToDailyWageMapArray);
+
 console.log("Total Days : " + totalWorkingDays + "\t" 
           + "Total Working Hours : " 
           + (totalEmployeeHours > 160 ? 160 : totalEmployeeHours));
