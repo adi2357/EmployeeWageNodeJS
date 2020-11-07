@@ -72,3 +72,6 @@ let fullTimeWageArray = dayToDailyWageMapArray.filter(fullTimeWages);
 console.log("Daily Wages when employees worked Full Time : ");
 console.log(fullTimeWageArray);
 
+console.log("Employee worked Full Time First on : ");
+console.log(dayToDailyWageMapArray.find(fullTimeWages));
+
