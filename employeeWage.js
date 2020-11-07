@@ -65,7 +65,7 @@ function totalWages(totalWage, dailyWage){
 console.log("Monthly Employee Wage using Reduce : Rs " + employeeDailyWageArray.reduce(totalWages, 0));
 
 
-function fullTimeWages(dailyWage){
+function fullTimeWages(dailyWage) {
     return dailyWage.includes("160");
 }
 let fullTimeWageArray = dayToDailyWageMapArray.filter(fullTimeWages);
@@ -78,3 +78,9 @@ console.log("Employee worked Full Time First on : " +
 console.log("Does all elements of Full Time Wage Array have Full Time Wages : "
              + fullTimeWageArray.every(fullTimeWages));
 
+
+function partTimeWages(dailyWage) {
+    return dailyWage.includes("80");
+}
+console.log("Has employee ever worked Part Time  : "
+             + dayToDailyWageMapArray.some(partTimeWages));
