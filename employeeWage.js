@@ -41,8 +41,8 @@ while(totalEmployeeHours <= TOTAL_MONTHLY_WORKING_HOURS &&
             dailyHours : employeeHours,
             dailyWage:calculateDailyWage(employeeHours),
             toString(){
-                return "\nDay : " + this.day + "  => Working Hours : " + this.dailyHours + 
-                "\t And Wage Earned : " + this.dailyWage
+                return "Day : " + this.day + "  => Working Hours : " + this.dailyHours + 
+                "\t And Wage Earned : " + this.dailyWage + "\n"
             },
         }
 
@@ -148,7 +148,7 @@ while(totalEmployeeHours <= TOTAL_MONTHLY_WORKING_HOURS &&
     console.log("\nUSING OBJECT ARRAY : ");
     console.log(employeeDataObjectArray.toString());
 //USING ARROW FUNCTIONS ON EMPLOYEE OBJECT ARRAY
-    console.log("\nUSING ARROW FUNCTIONS ON EMPLOYEE OBJECT ARRAY : ");
+    console.log("USING ARROW FUNCTIONS ON EMPLOYEE OBJECT ARRAY : ");
     let totalWage = employeeDataObjectArray
                     .filter(employeeObject => employeeObject.dailyWage > 0)
                     .reduce((totalWage, employeeDataObjectArray) => totalWage += employeeDataObjectArray.dailyWage, 0);
@@ -164,9 +164,9 @@ while(totalEmployeeHours <= TOTAL_MONTHLY_WORKING_HOURS &&
     let partTimeWorkingDaysArray = employeeDataObjectArray
                                    .filter(employeeObject => employeeObject.dailyHours == 4)
                                    .map(employeeDataObjectArray => employeeDataObjectArray.toString());
-    console.log("\nPart Time Work Days : " + partTimeWorkingDaysArray);
+    console.log("\nPart Time Work Days : \n" + partTimeWorkingDaysArray);
     let nonWorkingDaysNumber = employeeDataObjectArray
                                .filter(employeeObject => employeeObject.dailyHours == 0)
                                .map(employeeDataObjectArray => employeeDataObjectArray.day);
-    console.log("\nNon Woring Days :\n" + nonWorkingDaysNumber);
+    console.log("Non Woring Days :\n" + nonWorkingDaysNumber);
 }
